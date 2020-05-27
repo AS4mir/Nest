@@ -1,36 +1,30 @@
-## HTB-Machines
+###Nest HTB-Machine
 
-You can use the [editor on GitHub](https://github.com/AS4mir/Test/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+##Summary
+Nest is a easy windows machine with ip ```10.10.10.178```
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 
-### test
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-B000m!!
+##Enumeration-Nmap
 ```
+root@strike:~# nmap -sC -sV 10.10.10.178
+Starting Nmap 7.70 ( https://nmap.org ) at 2020-05-27 16:51 EET
+Nmap scan report for 10.10.10.178
+Host is up (0.073s latency).
+Not shown: 999 filtered ports
+PORT    STATE SERVICE       VERSION
+445/tcp open  microsoft-ds?
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Host script results:
+|_clock-skew: mean: 4m59s, deviation: 0s, median: 4m59s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-05-27 16:57:14
+|_  start_date: 2020-05-27 15:09:41
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AS4mir/Test/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 73.08 seconds
+root@strike:~#
+```
